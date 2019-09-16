@@ -86,7 +86,30 @@ public class MySQLConnection implements DBConnection {
 
 	@Override
 	public Set<String> getFavoriteItemIds(String userId) {
-		return null;
+		if (conn == null) {
+			return new HashSet<>();
+		}
+		
+		Set<String> favoriteItems = new HashSet<>();
+		
+		try {
+			String sql = "SELECT  item_id FROM history WHERE user_id = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, userId);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				String itemId = rs.getString("item_id");
+				favoriteItems.add(itemId);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return favoriteItems;
+
+		
 	}
 
 	@Override
