@@ -100,7 +100,6 @@ public class SearchItem extends HttpServlet {
 //			array.put(new JSONObject().put("username", "abcd").put("address", "San Francisco").put("time", "01/01/2017"));
 //			array.put(new JSONObject().put("username", "1234").put("address", "San Jose").put("time", "01/02/2017"));
 //
-//
 //		}catch (JSONException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();	
