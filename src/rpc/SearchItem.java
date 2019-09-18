@@ -79,13 +79,13 @@ public class SearchItem extends HttpServlet {
 
 
 		
-		TicketMasterClient client = new TicketMasterClient();
-		List<Item> items = client.search(lat, lon, null);
-		JSONArray array = new JSONArray();
-		for (Item item : items) {
-			array.put(item.toJSONObject());
-		}
-		RpcHelper.writeJsonArray(response, array);
+//		TicketMasterClient client = new TicketMasterClient();
+//		List<Item> items = client.search(lat, lon, null);
+//		JSONArray array = new JSONArray();
+//		for (Item item : items) {
+//			array.put(item.toJSONObject());
+//		}
+//		RpcHelper.writeJsonArray(response, array);
 //		
 //		// TODO Auto-generated method stub
 //		//response.getWriter().append("Served at: ").append(request.getContextPath());
