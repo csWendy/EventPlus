@@ -31,7 +31,7 @@ public class TicketMasterClient {
 		}
 
 		try {
-			keyword = URLEncoder.encode(keyword, "UTF-8");
+			keyword = URLEncoder.encode(keyword, "UTF-8"); // "Rick Sun" => "Rick%20Sun"
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
