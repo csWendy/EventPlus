@@ -20,8 +20,6 @@ import db.DBConnection;
 import db.DBConnectionFactory;
 import entity.Item;
 
-
-import entity.Item;
 import external.TicketMasterClient;
 
 
